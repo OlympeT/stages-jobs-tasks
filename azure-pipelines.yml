@@ -18,6 +18,7 @@ stages:
 
   - job: BuildBackendApp
     displayName: Build Backend App
+    dependsOn: BuildFrontendApp
     steps:
     - script: echo building backend app
       displayName: build backend app
