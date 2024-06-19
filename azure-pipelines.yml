@@ -41,6 +41,9 @@ stages:
 
 - stage: DeployProd
   displayName: Deploy to PROD environment
+  dependsOn:
+     - DeployDev
+     - BuildApp
   pool:
     vmImage: 'ubuntu-latest'
   jobs:
