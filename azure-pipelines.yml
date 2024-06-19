@@ -36,6 +36,7 @@ stages:
 
   - job: DeployBackendDev
     displayName: Deploy backend to DEV
+    dependsOn: DeployFrontendDev
     steps:
     - script: echo deploying backend app to DEV
       displayName: deploy backend app to DEV
@@ -53,6 +54,7 @@ stages:
 
   - job: DeployBackendProd
     displayName: Deploy backend to PROD
+    dependsOn: DeployFrontendProd
     pool:
       vmImage: 'vs2017-win2016'
     steps:
