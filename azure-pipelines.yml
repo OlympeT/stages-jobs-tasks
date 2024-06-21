@@ -48,7 +48,7 @@ stages:
     vmImage: 'ubuntu-latest'
   jobs:
   - job: DeployFrontendProd
-    displayName: Deploy frontend to PROD
+    displayName: Deploy frontend -> PROD
     steps:
     - script: echo deploying frontend app to PROD
       displayName: deploy frontend app to PROD
